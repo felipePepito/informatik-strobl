@@ -9,10 +9,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/", name="homepage")
      */
     public function index() {
-        return $this->render("home.html.twig", [
+        return $this->render('home.html.twig', [
             "title" => "Informatik Strobl"
         ]);
     }

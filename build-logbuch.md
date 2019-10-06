@@ -46,6 +46,14 @@ Ein recipie Fügt Composer-Komponenten hinzu, updatet symfony.lock und kann glei
 
 
 
+## Profiler
+
+Installation:
+
+`composer require profiler --dev`
+
+
+
 ## git
 ./idea zu .gitignore hinzufügen
 
@@ -78,3 +86,25 @@ Dadurch kann die Funktion
 `{% %}` do something
 
 `{# #}` comments
+
+
+
+
+## Routing
+Alle verfügbaren Routes können via\
+`./bin/console debug:router`\
+angezeigt werden.
+
+In einem Template wird\
+`{{ path('app_main_home') }}`\
+verwendet, um eine Route (eine href) automatisch zu generieren.
+
+Die `@Route` Annotation bietet die Möglichkeit, Namen für Routes zu vergeben:\
+`@Route('/', name='main_home')`
+
+### Wildcards
+Routes können Wildcards besitzen:\
+`@Route('/{var}', name='main_home')`
+
+Entsprechend werden Pfade generiert:\
+`{{ path('app_main_home', {var: 'Wert'}) }}`
