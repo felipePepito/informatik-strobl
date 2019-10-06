@@ -33,6 +33,19 @@ Aus dem Symfony Verzeichnis heraus..
 
 `symfony server:start`
 
+
+## Flex
+
+### Flex Aliases
+Anstatt vendor/package kann man auch direkt irgendein alias für ein package verwenden, gelistet auf *symfony.sh*
+
+### Flex Recipies
+Ein Weg, um andere Bundles zu integrieren.
+
+Ein recipie Fügt Composer-Komponenten hinzu, updatet symfony.lock und kann gleichzeitig auch Dateien im Projekt hinzufügen / ändern, um das Bundle einzufügen.
+
+
+
 ## git
 ./idea zu .gitignore hinzufügen
 
@@ -44,12 +57,24 @@ Eine Klasse in **Controller** erstellen, die Funktion entsprechend mit Annotatio
 ### Slugs
 Routes kann man mit `{slug}`s versehen (Wildcard routes) 
 
-## Flex
 
-### Flex Aliases
-Anstatt vendor/package kann man auch direkt irgendein alias für ein package verwenden, gelistet auf *symfony.sh*
 
-### Flex Recipies
-Ein Weg, um andere Bundles zu integrieren.
+## Twig
+Installieren von Twig:
+`composer require twig`
 
-Ein recipie Fügt Composer-Komponenten hinzu, updatet symfony.lock und kann gleichzeitig auch Dateien im Projekt hinzufügen / ändern, um das Bundle einzufügen.
+Fügt u.a. das Verzeichnis templates/ hinzu.
+
+Damit ein Controller Twig rendern kann, muss er von AbstractController erben:
+
+`class MainController extends AbstractController`
+
+Dadurch kann die Funktion 
+`$this->render('template.html.twig', [...])` verwendet werden.
+
+### Twig Syntax
+`{{ }}` say something
+
+`{% %}` do something
+
+`{# #}` comments
