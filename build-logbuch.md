@@ -25,11 +25,31 @@ Keine Ahnung was das soll..
 
 `composer require annotations`
 
+`composer require sec-checker --dev`
+Ein Symfony Plugin um Security Checks durchzuführen.
+
 ## Server starten
 Aus dem Symfony Verzeichnis heraus..
 
 `symfony server:start`
 
+## git
+./idea zu .gitignore hinzufügen
+
+`git push https://github.com/felipePepito/informatik-strobl master`
+
 ## Routes / Controller hinzufügen
 Eine Klasse in **Controller** erstellen, die Funktion entsprechend mit Annotationen versehen.
 
+### Slugs
+Routes kann man mit `{slug}`s versehen (Wildcard routes) 
+
+## Flex
+
+### Flex Aliases
+Anstatt vendor/package kann man auch direkt irgendein alias für ein package verwenden, gelistet auf *symfony.sh*
+
+### Flex Recipies
+Ein Weg, um andere Bundles zu integrieren.
+
+Ein recipie Fügt Composer-Komponenten hinzu, updatet symfony.lock und kann gleichzeitig auch Dateien im Projekt hinzufügen / ändern, um das Bundle einzufügen.
